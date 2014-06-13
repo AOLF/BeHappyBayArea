@@ -408,7 +408,7 @@ h6 {
 }
 /* ---------- BANNER ---------- */
 .banner-container {
-  background: #F49018 url('../images/bg.jpg');
+  background: #F8F8F8;
   background-attachment:scroll;
   background-position:top;
   background-repeat:repeat-x;
@@ -417,16 +417,38 @@ h6 {
   border: solid #A36464;
   border-width: 2px 0;
 }
+
 .banner-container h1 {
-  color: white;
-  line-height: 1.2em;
-  margin-bottom: 15px;
+color: #333333;
+line-height: 1.0em;
+margin-bottom: 10px;
+font-family: Helvetica,Arial,Verdana;
+font-size: 38px;
+line-height: 40px;
+font-weight:900 ;
+
+
 }
 .banner-container h3 {
-  color: white;
-  line-height: 1.5em;
-  margin-bottom: 15px;
+color:#81817A; 
+line-height: 1.0em;
+margin-bottom: 5px;
+font-family: Helvetica,Arial,Verdana;
+font-size: 24px;
+line-height: 26px;
+font-weight:500 ;
 }
+
+.banner-container h4 {
+color: #81817A;
+line-height: 1.0em;
+margin-bottom: 5px;
+font-family: Helvetica,Arial,Verdana;
+font-size: 20px;
+line-height: 26px;
+font-weight:500 ;
+}
+
 .product-header-pricing {
   background: white;
   -webkit-border-radius: 5px;
@@ -494,9 +516,9 @@ h6 {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  float: right;
+  float: left;
   padding: 2em 0;
-  width: 100%;
+  width: 68.5%;
   -webkit-box-shadow: 0 0 10px #282e31;
   box-shadow: 0 0 10px #282e31;
 }
@@ -1723,4 +1745,15 @@ textarea.LV_invalid_field:active {
   form textarea {
     width: 100%;
   }
+
+.quote {
+	color: #333333;
+	font-family: "Open Sans";
+	text-align: center;
+	font-size: 1em;
+	line-height: 1.3;
+	background: url("../images/decoration.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	width: 75%;
+	padding: 0 100px;
+	}
 }

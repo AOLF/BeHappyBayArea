@@ -47,6 +47,70 @@
             background-color: rgb(253, 249, 204);
         }
     </style>
+<style>
+ @media  
+        only screen and (max-width: 760px), 
+        (min-device-width: 768px) and (max-device-width: 1024px)  { 
+         
+                /* Force table to not be like tables anymore */ 
+                table, thead, tbody, th, td, tr {  
+                        display: block;  
+                } 
+                 
+                /* Hide table headers (but not display: none;, for accessibility) */ 
+                thead tr {  
+                        position: absolute; 
+                        top: -9999px; 
+                        left: -9999px; 
+                } 
+                 
+                tr { border: 1px solid #ccc; } 
+                 
+                td {  
+                        /* Behave  like a "row" */ 
+                        border: none; 
+                        border-bottom: 1px solid #eee;  
+                        position: relative; 
+                        padding-left: 50%;  
+                } 
+                 
+                td:before {  
+                        /* Now like a table header */ 
+                        position: absolute; 
+                        /* Top/left values mimic padding */ 
+                        top: 6px; 
+                        left: 6px; 
+                        width: 45%;  
+                        padding-right: 10px;  
+                        white-space: nowrap; 
+                } 
+                 
+                /* 
+                Label the data 
+                */ 
+ 
+                 
+        }
+
+  /* Smartphones (portrait and landscape) ----------- */
+        @media only screen
+        and (min-device-width : 320px)
+        and (max-device-width : 480px) {
+                body {
+                        padding: 0;
+                        margin: 0;
+                        width: 320px; }
+                }
+
+        /* iPads (portrait and landscape) ----------- */
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+                body {
+                        width: 495px;
+                }
+        }
+
+        </style>
+
 
     <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
     <!-- Favicon and Apple Touch Icons -->
@@ -91,12 +155,6 @@
         <!-- -->
     </div>
     <!--nav class="floating-nav container"> </nav-->
-    <div>
-        <!-- The navigation is generated automatically based on the sections with the class .spy-hook -->
-        <!-- JavaScript must be enabled in the browser in order for this to work -->
-        <ul>
-        </ul>
-    </div>
     <!-- end floating-nav -->
     <!-- BANNER -->
     
@@ -105,7 +163,7 @@
         <div class="container">
             <div class="row">
                 <div class="span7 clearfix header-contents">
-                    <h1>No one is in charge of your</h1>
+                    <h1>Making Life a Celebration</h1>
                       <h1>Happiness except YOU!</h1>
                       <h3>Did you know “Sudarshan Kriya” helps you</h3>
 
@@ -113,12 +171,14 @@
                          <h3>you happy no matter what?</h3>
                          <h4 style="color: #fff">To learn more come to our FREE introduction to the happiness program</h4>
                    
-<!--Mitashi
 
  <div id="wrapper">
                         <div class="slider-wrapper theme-default" style="padding: 0pt 0em; text-align: center;">
                             <div id="slider" class="nivoSlider">
-                                <img src="images/five.jpg" data-thumb="images/five.jpg" title="Your breath is a powerful energy source, which can cleanse your body and mind of toxins"><img src="images/one.jpg" data-thumb="images/one.jpg" alt="" title="Through yogic breathing techniques, you can free yourself from tension, pain and stress"><img src="images/six.jpg" data-thumb="images/six.jpg" alt="" title="Explore what millions in the world have experienced"></div>
+                                
+				<img src="images/carousel-v1.jpg" data-thumb="images/five.jpg" width="646" height="297" title="Your breath is a powerful energy source, which can cleanse your body and mind of toxins">
+				<img src="images/carousel-v2.jpg" data-thumb="images/one.jpg" width="646" height="297" alt="" title="Through yogic breathing techniques, you can free yourself from tension, pain and stress">
+				<img src="images/carousel-v3.jpg" data-thumb="images/six.jpg" width="646" height="297" alt="" title="Explore what millions in the world have experienced"></div>
                             <div id="htmlcaption" class="nivo-html-caption">
                                 Your
 Breathing is an essential energy source to clean you of
@@ -126,7 +186,6 @@ toxins
                             </div>
                         </div>
                     </div>
-      Mitashi-->              
                     
                     
                     <!--<div class="span7" style="background-color: rgb(206, 125, 15); margin-left: 0px; padding-left: 10px; padding-top: 5px; background-attachment: inherit; background-repeat: no-repeat;">
@@ -144,7 +203,8 @@ toxins
 	<h3 style="color:#AA670D" align="center">Upcoming Workshops listed at end of the page</h3>-->
                             <div align="center" style="color: #7A8992"><!-- <h3 style="color: #7A8992">Happiness Program<br/>with<br/>Sri Sri Ravi Shankar</h3> --></div>
 <!--                            <span align="center" style="color: #7A8992">-->
-                                <div class="header-cta">								   <a href="http://secure.artofliving.org/course_details.aspx?course_id=16793" target="_blank"><img src="images/HPwithSriSri.png" alt="Happiness Program with Sri Sri Ravi Shankar" border="0" /></a>
+                                <!--div class="header-cta">
+					 <a href="http://secure.artofliving.org/course_details.aspx?course_id=16793" target="_blank"><img src="images/HPwithSriSri.png" alt="Happiness Program with Sri Sri Ravi Shankar" border="0" /></a>
                                     <!-- <div align="left" style="color: #016CB4;">
                                         <h4 style="color: #7A8992;">
 	                                        <figure class="figure-left" style="margin-right: 5px; margin-bottom: 20px;"> <img src="images/natalie.jpg" width="75" height="75" alt="Testimonial Natalie"></figure>"So transformational and so powerful." ~Natalie Kaharick
@@ -198,22 +258,14 @@ toxins
                 </div>
                 <!-- end span8 -->
                 
-                <div class="happiness-before-after">
-                    <img src="images/before_after-2.png" alt="">
-                        </div>
-                
-                
-                    <div class="product-header-signup" style="margin-left: 30px; padding: 3px;">
+                    <div class="product-header-signup" style="margin-left: 0px; padding: 3px;">
                         <h3 style="color: #7a8992; margin-left: 10px; margin-top: 15px; margin-bottom: 5px;">Sign up for a FREE 1-hour introductory workshop near you</h3>
                         <div style="padding-left: 15px;">✓ Powerful Breathing Techniques ... Generate Physical, Mental, and Emotional Well-Being</div>
-                        <div style="padding-left: 15px;">✓ Effortless Guided Meditation ... Helps You Practice These Techniques Every Day</div>
-                        <div style="padding-left: 15px;">✓ Yoga of the Mind ... Gain Practical Wisdom for Getting the Most Out of Life</div>
                         <div style="padding-left: 15px; margin-bottom: 10px;">✓ Live Q&A ... Find Out if These "Health and Happiness Sacred Treasures" Are Right For You!</div>
 
                         <table id="tblEvents" border="0" cellpadding="6" cellspacing="2" style="width: 99%; margin-left: auto; margin-right: auto; background-color: #fff; border-collapse: separate; margin: 3px;">
                             <tr style="color: #fff; font-weight: bold; background-color: rgb(206, 125, 15);">
-                                <th style="text-align: left; padding: 3px;">Date &amp; Time</th>
-                                <th style="text-align: left; padding: 3px;">City</th>                                <th style="text-align: left; padding: 3px;">Theme</th>
+				<th style="text-align: left; padding: 3px;">Event</th>
                                 <th style="text-align: left; padding: 3px;">Location</th>
                                 <th style="text-align: left; padding: 3px;">Contact</th>
                                 <th style="text-align: left; padding: 3px;">Sign Up</th>
@@ -228,7 +280,6 @@ toxins
     <!-- end banner-container -->
     <!-- FLOATING MENU -->
     <!-- FEATURES -->
-    <section class="container"></section>
     <div class="container">
         <div class="row">
             <div class="span7 clearfix header-contents">

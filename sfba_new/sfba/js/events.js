@@ -114,10 +114,17 @@ function DisplayEvents(data) {
     var strbuilder = '';
     $.each(data, function () {
         var phone = this.event.phone.replace(/-/g, '').replace(/\(/g, '').replace(/\)/g, '');
-        strbuilder = '<tr style="color: #333; font-family: Arial, Helvetica, Sans-serif; font-size: 13px;"><td style="padding: 6px; border-bottom: 1px solid #333;">' + this.event.dt + '</td><td style="padding: 6px; border-bottom: 1px solid #333;">' + this.event.city + '</td><td style="padding: 6px; border-bottom: 1px solid #333;">' +
-            this.event.title + '</td><td style="padding: 6px; border-bottom: 1px solid #333;">' + this.event.location + '<br/>' + this.event.address + '<br/>' + this.event.city + ', ' + this.event.state + ' ' + this.event.zip_code + '</td><td style="padding: 6px; border-bottom: 1px solid #333;">' +
+        strbuilder = '<tr style="color: #333; font-family: Arial, Helvetica, Sans-serif; font-size: 13px;"><td style="padding: 6px; border-bottom: 1px solid #333;">' + 
+			this.event.title+'</br>'+'<span style="font-weight:bold">'+ this.event.dt + 
+	//'</td><td style="padding: 6px; border-bottom: 1px solid #333;">' + this.event.city + 
+	
+	//'</td><td style="padding: 6px; border-bottom: 1px solid #333;">' +
+        //    this.event.title + 
+	
+	'</td><td style="padding: 6px; border-bottom: 1px solid #333;">' + this.event.location + '<br/>' + this.event.address + '<br/>' + '<span style="font-weight:bold">'+this.event.city + '</span>, ' + this.event.state + ' ' + this.event.zip_code + '</td><td style="padding: 6px; border-bottom: 1px solid #333;">' +
             '<a style="color: #026bb9" href="tel:' + phone + '">' + this.event.phone + '</a></td><td style="padding: 6px; border-bottom: 1px solid #333; text-aling: center;"><a href=\"javascript:openForm(\'' + this.event.intro_session_id + '\');\"><img src="images/rsvp.gif" border="0" /></td></tr>' +
-            '<tr id="tr' + this.event.intro_session_id + '" class="trForm" style="display: none"><td style="border-bottom: 1px solid #333">&nbsp;</td>' +
+            '<tr id="tr' + this.event.intro_session_id + '" class="trForm" style="display: none">'+
+		//'<td style="border-bottom: 1px solid #333">&nbsp;</td>' +
             '<td colspan="3" class="highlightrow" style="border-bottom: 1px solid #333"><form id="form' + this.event.intro_session_id + '" action="post" style="background-color: rgb(221, 234, 207); color: #333; padding: 3px; font-size: 9pt;">' +
             '<table border="0" cellpadding="1" cellspacing="0" class="highlightrow"><tr><td><span style="font-weight: bold">Name</span><br/><input type="text" size="25" name="name' + this.event.intro_session_id + '" id="name' + this.event.intro_session_id + '" class="required" /></td>' +
             '<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></td><td><span style="font-weight: bold">Email</span> <span style="font-size: 0.9em">(you&apos;ll get a confirmation email)</span><br/><input type="text" size="25" name="email' + this.event.intro_session_id + '" id="email' + this.event.intro_session_id + '" class="required email" /></td>' +
